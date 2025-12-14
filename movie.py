@@ -527,10 +527,12 @@ elif page == "프로젝트 진행과정":
 
     st.markdown("### 데이터 수집")
     st.markdown("""
-- KOBIS 영화관입장권통합전산망에서 연도별 박스오피스 데이터를 수집하였다.  
+- KOBIS 영화관입장권통합전산망에서 연도별 박스오피스 데이터를 수집하였다. 
+https://www.kobis.or.kr/kobis/business/stat/boxs/findYearlyBoxOfficeList.do?loadEnd=0&searchType=search&sSearchYearFrom={year}&sMultiMovieYn=N&sRepNationCd={nation_code} 
 - 전체와 국산을 구분하여 2017–2019, 2023–2025 연도별 상위 영화 데이터를 확보하였다.  
 - 장르별 분석을 위해 주요 장르를 기준으로 별도 조회하여 장르별 흥행 데이터를 확보하였다.  
-- VKOBIS 온라인상영관통합전산망에서 장르별 온라인 이용 점유율 데이터를 수집하였다.
+- VKOBIS 온라인상영관통합전산망에서 장르별 온라인 이용 점유율 데이터를 수집하였다.                                                                 
+https://www.vkobis.or.kr/statistics/selectGenreList.do
 """)
 
     st.markdown("### 수집 방식")
@@ -797,3 +799,4 @@ elif page == "프로젝트 기대효과":
         st.dataframe(out, use_container_width=True, height=520)
     else:
         st.info("요약표 생성 불가")
+
