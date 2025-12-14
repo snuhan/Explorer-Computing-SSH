@@ -1,4 +1,3 @@
-%%writefile movie.py
 import os
 import re
 import numpy as np
@@ -560,11 +559,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 def scrape_market_overview():
     years = [2017, 2018, 2019, 2023, 2024, 2025]
     result_data = []
-    
+
     options = webdriver.ChromeOptions()
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.maximize_window()
-    
+
     try:
         wait = WebDriverWait(driver, 15)
 
@@ -581,7 +580,7 @@ def scrape_market_overview():
                 count = 0
                 for row in rows:
                     if count >= 25: break
-                    
+
                     cols = row.find_elements(By.TAG_NAME, "td")
                     if len(cols) < 8: continue
 
