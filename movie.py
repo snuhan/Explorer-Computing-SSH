@@ -6,7 +6,7 @@ import streamlit as st
 import plotly.express as px
 
 st.set_page_config(
-    page_title="코로나 이후 영화 산업의 장르별 타격 영향 분석",
+    page_title="코로나 이후 영화 산업의 변화와 장르별 타격 분석",
     page_icon="🎬",
     layout="wide"
 )
@@ -505,7 +505,7 @@ page = st.sidebar.radio(
     index=0
 )
 
-st.title("코로나 이후 영화 산업의 장르별 타격 영향 분석")
+st.title("코코로나 이후 영화 산업의 변화와 장르별 타격 분석")
 st.caption("코로나 전 2017–2019 | 코로나 후 2023–2025")
 
 # =========================
@@ -799,4 +799,5 @@ elif page == "프로젝트 기대효과":
         st.dataframe(out, use_container_width=True, height=520)
     else:
         st.info("요약표 생성 불가")
+
 
